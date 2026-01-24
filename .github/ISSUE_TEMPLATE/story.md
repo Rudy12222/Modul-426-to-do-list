@@ -1,5 +1,5 @@
 ---
-name: Sprint 1
+name: Story
 about: Describe this issue template's purpose here.
 title: "[STORY]"
 labels: user stories
