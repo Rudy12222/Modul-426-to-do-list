@@ -1,5 +1,5 @@
 ---
-name: Story
+name: alte Story
 about: Describe this issue template's purpose here.
 title: "[STORY]"
 labels: user stories
