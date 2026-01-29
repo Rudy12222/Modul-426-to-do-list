@@ -10,6 +10,3 @@
 </head>
 
 <body>
-    <header>
-        <button type="button" id="sign-out-button" content="SIGN OUT"></button>
-    </header>
