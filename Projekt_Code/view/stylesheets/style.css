@@ -50,6 +50,33 @@ ul {
     padding-left: 20px;
 }
 
+#view-detailed-list-box ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+#view-detailed-list-box li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 8px 0;
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.task-delete-button {
+    width: auto;
+    max-width: none;
+    padding: 8px 12px;
+    margin-left: 0;
+    font-size: 12px;
+}
+
+.task-status {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
 form {
     display: flex;
     flex-wrap: wrap;

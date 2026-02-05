@@ -3,9 +3,11 @@
 
 
 <div id="view-detailed-list-box">
+    <p id="task-status" class="task-status"></p>
     <ul id="to-do-list"></ul>
 </div>
 
-<script href="controller/view-detailed-list-controller.js"></script>
+<script src="controller/task-delete.js"></script>
+<script src="controller/view-detailed-list-controller.js"></script>
 
 <?php include "view/footer.php"; ?>
