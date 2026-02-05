@@ -1,20 +1,42 @@
-<?php $page_name = "create-new-list"; ?>
-<?php include "view/header.php"; ?>
+<?php
+$page_name = "create-new-list"; // Current page identifier
+include "view/header.php"; // Include header
+?>
 
-<h1 class="page-tile">Create A New ToDo-List</h1>
+<h1 class="page-title">Create A New ToDo-List</h1>
 
-<button id="new-tasks-button">New Tasks</button>
-
+<!-- New ToDo list form -->
 <form id="create-new-list-form" class="responsive-form">
-    <label for="new-list-title">Enter List Title:</label>
-    <input type="text" id="new-list-title">
-    <label for="new-list-item">Enter List Item:</label>
-    <input type="text" id="new-list-item">
-    <label for="new-list-due-date">Enter Due Date</label>
-    <input type="date" id="new-list-due-date" name="due-date">
-    <input type="submit" value="Create New ToDo-List">
+    <p>
+        <label for="new-list-title">Enter List Title:</label>
+        <input type="text" id="new-list-title" required>
+    </p>
+
+    <div id="items-container">
+        <p>
+            <label>Enter List Item:</label>
+            <input type="text" class="new-list-item">
+        </p>
+    </div>
+
+    <button type="button" id="add-item">+ Add Task</button>
+
+    <p>
+        <label for="new-list-due-date">Enter Due Date</label>
+        <input type="date" id="new-list-due-date" required>
+    </p>
+
+    <button type="submit">Create New ToDo-List</button>
 </form>
 
+<hr>
+
+<h2>Existing ToDo Lists</h2>
+<div id="lists-output">
+    <p>No lists yet.</p>
+</div>
+
+<!-- JavaScript controller -->
 <script src="./controller/create-new-list-controller.js"></script>
 
-<?php include "view/footer.php"; ?>
+<?php include "view/footer.php"; // Include footer ?>
