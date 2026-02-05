@@ -7,4 +7,6 @@
 
 <p class="page-text" id="index-page-text2">Already a Member? Log in to view your Lists!</p>
 
+<p>I made a change</p>
+
 <?php include "view/footer.php"; ?>
