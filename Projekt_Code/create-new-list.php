@@ -3,8 +3,10 @@
 
 <h1 class="page-tile">Create A New ToDo-List</h1>
 
+<button id="new-tasks-button">New Tasks</button>
+
 <form id="create-new-list-form" class="responsive-form">
-    <label for="new-list-title">Enter List Tile:</label>
+    <label for="new-list-title">Enter List Title:</label>
     <input type="text" id="new-list-title">
     <label for="new-list-item">Enter List Item:</label>
     <input type="text" id="new-list-item">
@@ -13,6 +15,6 @@
     <input type="submit" value="Create New ToDo-List">
 </form>
 
-<script href="controller/create-new-list-controller.js"></script>
+<script src="./controller/create-new-list-controller.js"></script>
 
 <?php include "view/footer.php"; ?>
