@@ -2,9 +2,7 @@
 <?php include "view/header.php"; ?>
 
 <h1>My Todo-Lists</h1>
-<div class="list-box">
-    <ul id="todo-list-overview">
-    </ul>
+<div class="list-box" id="display-list-box">
     <button id="addButton">Create New Todo-List</button>
 </div>
 
