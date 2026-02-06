@@ -1,8 +1,6 @@
 <?php $page_name = "overview"; ?>
 <?php include "view/header.php"; ?>
 
-
-
 <h1>My Todo-Lists</h1>
 <div class="list-box">
     <ul id="todo-list-overview">
