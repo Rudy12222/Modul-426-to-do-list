@@ -29,13 +29,6 @@ include "view/header.php"; // Include header
     <button type="submit">Create New ToDo-List</button>
 </form>
 
-<hr>
-
-<h2>Existing ToDo Lists</h2>
-<div id="lists-output">
-    <p>No lists yet.</p>
-</div>
-
 <!-- JavaScript controller -->
 <script src="./controller/create-new-list-controller.js"></script>
 
