@@ -32,13 +32,17 @@ function renderLists() {
         listDiv.className = "todo-list";
 
         listDiv.innerHTML = `
-            <h3>${key}</h3>
-            <p><strong>Due:</strong> ${list.due_date}</p>
-            <ul>
-                ${list.items.map(item => `<li>${item}</li>`).join("")}
-            </ul>
-            <small>Created: ${list.created_at}</small>
-        `;
+        <h3>${key}</h3>
+        <p><strong>Due:</strong> ${list.due_date}</p>
+        <ul>
+            ${list.items.map(item => `<li>${item}</li>`).join("")}
+        </ul>
+        <a href="edit-list.php?key=${encodeURIComponent(key)}">
+            <button>Edit</button>
+        </a>
+`;
+
+
 
         container.appendChild(listDiv);
     }
@@ -47,3 +51,7 @@ function renderLists() {
         container.innerHTML = "<p>No lists saved yet.</p>";
     }
 }
+
+document.getElementById("addButton").addEventListener("click", () => {
+    window.location.href = "create-new-list.php";
+});

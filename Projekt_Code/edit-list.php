@@ -3,16 +3,29 @@
 
 <h1 class="page-tile">Edit ToDo-List</h1>
 
-<form id="edit-list-form" class="responsive-form">
-    <label for="edit-list-title">Enter List Tile:</label>
-    <input type="text" id="edit-list-title">
-    <label for="edit-list-item">Enter List Item:</label>
-    <input type="text" id="edit-list-item">
-    <label for="edit-list-due-date">Enter Due Date</label>
-    <input type="date" id="edit-list-due-date" name="due-date">
-    <input type="submit" value="Save Changes">
+<form id="edit-list-form">
+    <h2>Edit List</h2>
+
+    <label>
+        Title
+        <input type="text" id="edit-title" required>
+    </label>
+
+    <label>
+        Due date
+        <input type="date" id="edit-due-date" required>
+    </label>
+
+    <label>
+        Items (one per line)
+        <textarea id="edit-items" rows="6"></textarea>
+    </label>
+
+    <button type="submit">Save</button>
+    <button type="button" id="cancel-edit">Cancel</button>
 </form>
 
-<script href="controller/edit-list-controller.js"></script>
+
+<script src="controller/edit-list-controller.js" defer></script>
 
 <?php include "view/footer.php"; ?>
