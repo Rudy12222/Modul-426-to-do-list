@@ -1,10 +1,6 @@
 <?php $page_name = "overview"; ?>
 <?php include "view/header.php"; ?>
 
-<header>
-    <button type="button" class="login-button" id="sign-out-button">SIGN OUT</button>
-</header>
-
 <h1>My Todo-Lists</h1>
 <div class="list-box">
     <ul id="todo-list-overview">
