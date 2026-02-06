@@ -1,53 +1,49 @@
-/* ---------- Render all saved lists ---------- */
+document.addEventListener("DOMContentLoaded", renderLists);
+
 function renderLists() {
-    output.innerHTML = ""; // Clear the output area
+    const container = document.getElementById("display-list-box");
+    container.innerHTML = "";
 
     let found = false;
 
-    // Loop through all keys in localStorage
     for (let i = 0; i < localStorage.length; i++) {
         const key = localStorage.key(i);
-        const value = localStorage.getItem(key);
-
         let list;
 
         try {
-            list = JSON.parse(value); // Try to parse the stored JSON
-        } catch (e) {
-            continue; // If not valid JSON, skip this entry
+            list = JSON.parse(localStorage.getItem(key));
+        } catch {
+            continue;
         }
 
-        // Check if the stored object is a valid todo list
-        if (!list || !Array.isArray(list.items) || !list.due_date) {
+        // Validate this is one of YOUR todo lists
+        if (
+            !list ||
+            !Array.isArray(list.items) ||
+            !list.due_date ||
+            !list.created_at
+        ) {
             continue;
         }
 
         found = true;
 
-        // Create a div to display the list
-        const mainDiv = document.querySelector("#display-list-box");
-        const div = document.createElement("div");
+        const listDiv = document.createElement("div");
+        listDiv.className = "todo-list";
 
-        div.innerHTML = `
+        listDiv.innerHTML = `
             <h3>${key}</h3>
             <p><strong>Due:</strong> ${list.due_date}</p>
             <ul>
                 ${list.items.map(item => `<li>${item}</li>`).join("")}
             </ul>
             <small>Created: ${list.created_at}</small>
-            <hr>
         `;
 
-        // Append the list div to the output area
-        output.appendChild(div);
-        output.appendChild(mainDiv);
+        container.appendChild(listDiv);
     }
 
-    // If no lists were found, display a placeholder message
     if (!found) {
-        output.innerHTML = "<p>No lists yet.</p>";
+        container.innerHTML = "<p>No lists saved yet.</p>";
     }
 }
-
-/* ---------- Render lists on page load ---------- */
-renderLists();
