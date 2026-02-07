@@ -1,3 +1,4 @@
+<?php $page_name = "confirmation"; // Current page identifier ?>
 <?php include "view/header.php"; // Shared header markup ?>
 
 <button type="submit">Are you sure?</button>
