@@ -1,10 +1,10 @@
-<?php $page_name = "log-in"; ?>
-<?php include "view/header.php"; ?>
+<?php $page_name = "log-in"; // Current page identifier ?>
+<?php include "view/header.php"; // Shared header markup ?>
 
-<!-- this is the header for the page -->
+<!-- Page title -->
 <h1 class="page-titel">Log In</h1>
 
-<!-- this form lets a user login -->
+<!-- Login form -->
 <form id="login-form" class="responsive-form">
     <label for="username-field">Username:</label>
     <input type="text" id="username-field">
@@ -13,11 +13,11 @@
     <input type="submit" value="SIGN IN">
 </form>
 
-<!-- link and text to create account-->
+<!-- Sign-up prompt and link -->
 <p id="sign-up-link-text">Don't have an account yet?</p>
 <a id="sign-up-link" href="sign-up.php">Sign Up here!</a>
 
-<!--this script provides the functionalities of the current page -->
+<!-- Page-specific controller script -->
 <script src="controller/login-controller.js"></script>
 
-<?php include "view/footer.php"; ?>
+<?php include "view/footer.php"; // Shared footer markup ?>

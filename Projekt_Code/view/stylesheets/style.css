@@ -1,15 +1,18 @@
+/* Global page layout */
 body {
     font-family: Arial, sans-serif;
     max-width: 400px;
     margin: 40px auto;
 }
 
+/* Main page headings */
 h1 {
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 60px;
 }
 
+/* Body text used on the index page */
 .page-text {
     text-align: center;
     font-size: 15px;
@@ -17,16 +20,19 @@ h1 {
     font-weight: bold;
 }
 
+/* Flex wrapper for inputs and buttons */
 .input-container {
     display: flex;
     gap: 10px;
 }
 
+/* Base input styling */
 input {
     flex: 1;
     padding: 8px;
 }
 
+/* Default button styling */
 button {
     background-color: white;
     border-radius: 8px;
@@ -45,6 +51,7 @@ button {
 
 }
 
+/* Submit button styling */
 input[type=submit] {
     background-color: white;
     border-radius: 8px;
@@ -62,17 +69,20 @@ input[type=submit] {
     margin-left: 28px;
 }
 
+/* List styling */
 ul {
     margin-top: 20px;
     padding-left: 20px;
 }
 
+/* General form layout */
 form {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
+/* Container styling for responsive forms */
 .responsive-form {
     max-width: 650px;
     width: 100%;
@@ -81,6 +91,7 @@ form {
     padding: 20px;
 }
 
+/* Label styling for form fields */
 label {
     min-width: 48%;
     margin-bottom: 10px;
