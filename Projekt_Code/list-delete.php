@@ -1,7 +1,9 @@
-<?php $page_name = "confirmation"; // Current page identifier ?>
-<?php include "view/header.php"; // Shared header markup ?>
+<?php $page_name = "confirmation"; ?>
+<?php include "view/header.php"; ?>
 
-<button type="submit">Are you sure?</button>
+<form id="delete-form">
+    <button type="submit">Are you sure?</button>
+</form>
 
 <script src="controller/list-delete-controller.js" defer></script>
-<?php include "view/footer.php"; // Shared footer markup ?>
+<?php include "view/footer.php"; ?>
