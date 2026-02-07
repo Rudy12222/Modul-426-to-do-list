@@ -50,7 +50,7 @@ function renderLists() {
         <a href="edit-list.php?key=${encodeURIComponent(key)}">
             <button>Edit</button>
         </a>
-        <a href="task-delete.js?key=${encodeURIComponent(key)}">
+        <a href="list-delete.php?key=${encodeURIComponent(key)}">
             <button>Delete</button>
         </a>
 `;
